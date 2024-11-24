@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D8CDC7FB2CF3E2FD0059176D /* Feed in Frameworks */ = {isa = PBXBuildFile; productRef = D8CDC7FA2CF3E2FD0059176D /* Feed */; };
+		D8CDC7FD2CF3E30B0059176D /* HNClient in Frameworks */ = {isa = PBXBuildFile; productRef = D8CDC7FC2CF3E30B0059176D /* HNClient */; };
+		D8CDC7FF2CF3E30B0059176D /* NetworkingClient in Frameworks */ = {isa = PBXBuildFile; productRef = D8CDC7FE2CF3E30B0059176D /* NetworkingClient */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D85B3E192CF37B7F00BA637B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,24 @@
 		D85B3E222CF37B7F00BA637B /* HackerNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D85B3E382CF37C0C00BA637B /* Exceptions for "HackerNews" folder in "HackerNews" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Packages/Core/API,
+				Packages/Core/Networking,
+				Packages/Features/Feed,
+			);
+			target = D85B3E052CF37B7D00BA637B /* HackerNews */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D85B3E082CF37B7D00BA637B /* HackerNews */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D85B3E382CF37C0C00BA637B /* Exceptions for "HackerNews" folder in "HackerNews" target */,
+			);
 			path = HackerNews;
 			sourceTree = "<group>";
 		};
@@ -52,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CDC7FB2CF3E2FD0059176D /* Feed in Frameworks */,
+				D8CDC7FF2CF3E30B0059176D /* NetworkingClient in Frameworks */,
+				D8CDC7FD2CF3E30B0059176D /* HNClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +102,7 @@
 				D85B3E082CF37B7D00BA637B /* HackerNews */,
 				D85B3E1B2CF37B7F00BA637B /* HackerNewsTests */,
 				D85B3E252CF37B7F00BA637B /* HackerNewsUITests */,
+				D8CDC7F92CF3E2FD0059176D /* Frameworks */,
 				D85B3E072CF37B7D00BA637B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +115,13 @@
 				D85B3E222CF37B7F00BA637B /* HackerNewsUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D8CDC7F92CF3E2FD0059176D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +144,9 @@
 			);
 			name = HackerNews;
 			packageProductDependencies = (
+				D8CDC7FA2CF3E2FD0059176D /* Feed */,
+				D8CDC7FC2CF3E30B0059176D /* HNClient */,
+				D8CDC7FE2CF3E30B0059176D /* NetworkingClient */,
 			);
 			productName = HackerNews;
 			productReference = D85B3E062CF37B7D00BA637B /* HackerNews.app */;
@@ -558,6 +593,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8CDC7FA2CF3E2FD0059176D /* Feed */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Feed;
+		};
+		D8CDC7FC2CF3E30B0059176D /* HNClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HNClient;
+		};
+		D8CDC7FE2CF3E30B0059176D /* NetworkingClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D85B3DFE2CF37B7D00BA637B /* Project object */;
 }
